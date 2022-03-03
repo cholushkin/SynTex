@@ -17,3 +17,4 @@ Also you can find examples of using in the Scripts directory.
 * Register new algorithms mechanism added.
 * First texture synthesis algorithm full neighborhood search (FNS) added.
 * Seed passing support.
+* LogChecker added.
