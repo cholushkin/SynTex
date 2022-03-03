@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FullNeighbourhoodSearch.cs" />
+    <Compile Include="LogChecker.cs" />
     <Compile Include="SynTex.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>

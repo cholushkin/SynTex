@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 static class Program
 {
     public class SynTex
     {
-        public enum Algorithm
-        {
-            FullNeighbourhoodSearch, // Full neighbourhood search algorithm
-
-        }
-
         public interface ITextureSynthesisAlgorithm
         {
             void ParseCommandLine(string[] commandLineStrings);
@@ -21,15 +16,18 @@ static class Program
             void Synthesize();
         }
 
-
         private readonly Dictionary<string, ITextureSynthesisAlgorithm> _algorithms = new Dictionary<string, ITextureSynthesisAlgorithm>(16);
-
 
         public void RegisterAlgorithm(ITextureSynthesisAlgorithm alg)
         {
             if (_algorithms.ContainsKey(alg.GetAlgorithmShortName()))
                 throw new Exception($"{alg.GetAlgorithmShortName()} is already registered.");
             _algorithms.Add(alg.GetAlgorithmShortName(), alg);
+        }
+
+        public Dictionary<string, ITextureSynthesisAlgorithm> GetRegisteredAlgorithms()
+        {
+            return _algorithms;
         }
 
         public void PrintUsage()
@@ -59,22 +57,17 @@ static class Program
             return "v.0.1";
         }
     }
-            
+          
+    public static LogChecker Log = new LogChecker(LogChecker.Level.Verbose);
     static void Main(string[] args)
     {
         try
         {
             var synTex = new SynTex();
             Console.WriteLine($"SynTex {synTex.GetVersionString()}");
-
+            
             // Register all algorithms
             synTex.RegisterAlgorithm(new FullNeighborhoodSearch());
-
-            //args = new[] {"FNS", "Samples/redfoam.png", "Output/redfoam3.png", "2", "128", "128", "0.5", "42"};
-
-
-
-
 
             if (args.Length < 1)
             {
@@ -83,8 +76,17 @@ static class Program
                 return;
             }
 
-            var synAlg = synTex.GetAlgorithm(args[0]);
-            synAlg.ParseCommandLine(args);
+            SetGlobalLogLevel(args[0]);
+
+            if (Log.Verbose())
+            {
+                Console.WriteLine($"Registered algorithms ({synTex.GetRegisteredAlgorithms().Count}):");
+                foreach (var alg in synTex.GetRegisteredAlgorithms().Values)
+                    Console.WriteLine($"  * {alg.GetAlgorithmName()}");
+            }    
+
+            var synAlg = synTex.GetAlgorithm(args[1]);
+            synAlg.ParseCommandLine(args.Skip(2).ToArray());
             synAlg.Synthesize();
         }
         catch (Exception e)
@@ -93,9 +95,23 @@ static class Program
         }
     }
 
+    private static void SetGlobalLogLevel(string logLev)
+    {
+        if (logLev == "disabled")
+            LogChecker.GlobalLevel = LogChecker.Level.Disabled;
+        else if (logLev == "important")
+            LogChecker.GlobalLevel = LogChecker.Level.Important;
+        else if (logLev == "normal")
+            LogChecker.GlobalLevel = LogChecker.Level.Normal;
+        else if (logLev == "verbose")
+            LogChecker.GlobalLevel = LogChecker.Level.Verbose;
+        else throw new Exception($"Unknown log level '{logLev}'");
+    }
+
     static void PrintHelp(SynTex synTex)
     {
-        Console.WriteLine("syntex.exe algorithm algorithm_parameters");
+        Console.WriteLine("syntex.exe log_level algorithm algorithm_parameters");
+        Console.WriteLine("  log_level - log printing level (disabled, important, normal, verbose)");
         Console.WriteLine("  algorithm - short name of the algorithm");
         Console.WriteLine("  algorithm_parameters - parameters set for a specific algorithm");
         Console.WriteLine(" ");

@@ -16,3 +16,4 @@ Version history
 * Register new algorithms mechanism added.
 * First texture synthesis algorithm full neighborhood search (FNS) added.
 * Seed passing support.
+* LogChecker added.
