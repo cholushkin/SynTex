@@ -46,15 +46,18 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
     public void PrintHelp()
     {
-        Console.WriteLine("FNS Sample Neighborhood OutputWidth OutputHeight Temperature Seed");
-        // Sample - sample file name 
-        // Neighborhood - Neighborhood around the pixel"
-        // OutputWidth - output picture width in pixels
-        // OutputHeight - output picture width in pixels
-        // Temperature - temperature
-        // Seed - random number generator seed   . If seed == -1 than seed will be randomized
-
-        Console.WriteLine("Example: syntex.exe FNS water.png 3 48 48 1.0 42");
+        Console.WriteLine("FNS SampleFileName OutputFileName Neighborhood OutputWidth OutputHeight Temperature Seed");
+        Console.WriteLine("  FNS - short name of algorithm to use");
+        Console.WriteLine("  SampleFileName - sample file name including extension to use");
+        Console.WriteLine("  OutputFileName - output file name including extension");
+        Console.WriteLine("  Neighborhood - Neighborhood around the pixel to consider");
+        Console.WriteLine("  OutputWidth - output picture width in pixels");
+        Console.WriteLine("  OutputHeight - output picture width in pixels");
+        Console.WriteLine("  Temperature - temperature from 0 to 1");
+        Console.WriteLine("  Seed - random number generator seed. If seed == -1 then seed will be randomized");
+        Console.WriteLine("");
+        Console.WriteLine("Example:");
+        Console.WriteLine("  syntex.exe verbose FNS Samples/water.png Output/watergen.png 3 48 48 1.0 42");
     }
 
     public void Synthesize()

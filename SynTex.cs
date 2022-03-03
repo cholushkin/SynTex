@@ -70,18 +70,8 @@ static class Program
             // Register all algorithms
             synTex.RegisterAlgorithm(new FullNeighborhoodSearch());
 
-            args = new[] {"FNS", "Samples/redfoam.png", "Output/redfoam3.png", "2", "128", "128", "0.5", "42"};
+            //args = new[] {"FNS", "Samples/redfoam.png", "Output/redfoam3.png", "2", "128", "128", "0.5", "42"};
 
-
-            //Console.WriteLine("FNS Sample Neighborhood OutputWidth OutputHeight Temperature Seed");
-            //// Sample - sample file name 
-            //// Neighborhood - Neighborhood around the pixel"
-            //// OutputWidth - output picture width in pixels
-            //// OutputHeight - output picture width in pixels
-            //// Temperature - temperature
-            //// Seed - random number generator seed
-
-            //Console.WriteLine("Example: syntex.exe FNS water.png 3 48 48 1.0 42");
 
 
 
