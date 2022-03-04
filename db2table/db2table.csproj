@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{660D54B3-2BAE-46F1-84E3-EDDE4E156CD1}</ProjectGuid>
+    <ProjectGuid>{AF82D08A-365A-4873-BA58-C88680BCDA7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SynTex</RootNamespace>
-    <AssemblyName>SynTex</AssemblyName>
+    <RootNamespace>db2table</RootNamespace>
+    <AssemblyName>db2table</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,31 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSVWriter.cs" />
-    <Compile Include="FullNeighbourhoodSearch.cs" />
-    <Compile Include="LogChecker.cs" />
-    <Compile Include="SynTex.cs" />
-    <Compile Include="Utils.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.ComponentModel.Composition.Registration" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
+    <Compile Include="db2table.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).exe" "$(SolutionDir)Scripts\$(ProjectName).exe"</PostBuildEvent>
-  </PropertyGroup>
 </Project>

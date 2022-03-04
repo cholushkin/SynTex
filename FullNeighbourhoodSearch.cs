@@ -100,7 +100,7 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
         // Make starting noise
         for (int y = 0; y < p.OutputHeight; y++)
-            for (int x = 0; x < p.OutputWidth; x++) 
+            for (int x = 0; x < p.OutputWidth; x++)
                 if (y + p.Neighborhood >= p.OutputHeight)
                 {
                     result[x + y * p.OutputWidth] = sample[random.Next(sampleWidth * sampleHeight)];
@@ -128,8 +128,13 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
             result[i] = sample[argmax];
             origins[i] = -1;
         }
+
         if (Program.Log.Normal())
+        {
+            Console.Write("\r100%    ");
             Console.WriteLine("Done");
+        }
+
         return result;
     }
 
