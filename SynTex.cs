@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 
 static class Program
@@ -14,6 +15,7 @@ static class Program
             string GetAlgorithmShortName();
             void PrintHelp();
             void Synthesize();
+            string GetCSVRecord();
         }
 
         private readonly Dictionary<string, ITextureSynthesisAlgorithm> _algorithms = new Dictionary<string, ITextureSynthesisAlgorithm>(16);
@@ -56,6 +58,17 @@ static class Program
         {
             return "v.0.1";
         }
+
+        public void AppendToCSV(string csvRow)
+        {
+            var isNewFile = !File.Exists(@"db.csv");
+            using (StreamWriter sw = File.AppendText(@"db.csv"))
+            {
+                if(isNewFile)
+                    sw.WriteLine("sample1;sample_size;output;output_image_size;duration;seed;neighborhood;temperature");
+                sw.WriteLine(csvRow);
+            }
+        }
     }
           
     public static LogChecker Log = new LogChecker(LogChecker.Level.Verbose);
@@ -82,12 +95,13 @@ static class Program
             {
                 Console.WriteLine($"Registered algorithms ({synTex.GetRegisteredAlgorithms().Count}):");
                 foreach (var alg in synTex.GetRegisteredAlgorithms().Values)
-                    Console.WriteLine($"  * {alg.GetAlgorithmName()}");
+                    Console.WriteLine($"  * {alg.GetAlgorithmName()} ({alg.GetAlgorithmShortName()})");
             }    
 
             var synAlg = synTex.GetAlgorithm(args[1]);
-            synAlg.ParseCommandLine(args.Skip(2).ToArray());
+            synAlg.ParseCommandLine(args.Skip(1).ToArray());
             synAlg.Synthesize();
+            synTex.AppendToCSV(synAlg.GetCSVRecord());
         }
         catch (Exception e)
         {
@@ -107,6 +121,7 @@ static class Program
             LogChecker.GlobalLevel = LogChecker.Level.Verbose;
         else throw new Exception($"Unknown log level '{logLev}'");
     }
+
 
     static void PrintHelp(SynTex synTex)
     {

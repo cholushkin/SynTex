@@ -1,0 +1,4 @@
+sample1;sample_size;output;output_image_size;duration;seed;neighborhood;temperature
+../Samples/redfoam.png;32x32;../Output/redfoam1.png;128x128;8156;42;1;not_used
+../Samples/redfoam.png;32x32;../Output/redfoam2.png;128x128;17980;42;2;not_used
+../Samples/redfoam.png;32x32;../Output/redfoam3.png;128x128;32906;42;3;not_used

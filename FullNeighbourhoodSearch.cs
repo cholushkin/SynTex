@@ -11,11 +11,12 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         public int Neighborhood;
         public int OutputWidth;
         public int OutputHeight;
-        public float Temperature;
         public int Seed;
     }
 
     private Parameters _parameters;
+    private Bitmap _sample;
+    private long _elapsedTime;
 
     public void ParseCommandLine(string[] commandLineStrings)
     {
@@ -30,8 +31,7 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         _parameters.Neighborhood = Convert.ToInt32(commandLineStrings[3]);
         _parameters.OutputWidth = Convert.ToInt32(commandLineStrings[4]);
         _parameters.OutputHeight = Convert.ToInt32(commandLineStrings[5]);
-        _parameters.Temperature = Convert.ToSingle(commandLineStrings[6]);
-        _parameters.Seed = Convert.ToInt32(commandLineStrings[7]);
+        _parameters.Seed = Convert.ToInt32(commandLineStrings[6]);
     }
 
     public string GetAlgorithmName()
@@ -53,7 +53,6 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         Console.WriteLine("  Neighborhood - Neighborhood around the pixel to consider");
         Console.WriteLine("  OutputWidth - output picture width in pixels");
         Console.WriteLine("  OutputHeight - output picture width in pixels");
-        Console.WriteLine("  Temperature - temperature from 0 to 1");
         Console.WriteLine("  Seed - random number generator seed. If seed == -1 then seed will be randomized");
         Console.WriteLine("");
         Console.WriteLine("Example:");
@@ -64,25 +63,33 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
     {
         Debug.Assert(_parameters != null);
 
-        Bitmap sample = new Bitmap($"{_parameters.SampleFilename}");
-        int[] sampleArray = Utils.BitmapToARGBArray(sample);
+        _sample = new Bitmap($"{_parameters.SampleFilename}");
+        int[] sampleArray = Utils.BitmapToARGBArray(_sample);
 
         Stopwatch sw = Stopwatch.StartNew();
-        int[] result = FullSynthesis(sampleArray, sample.Width, sample.Height, _parameters.Neighborhood,
-            _parameters.OutputWidth, _parameters.OutputHeight,
-            _parameters.Temperature);
-        if(Program.Log.Normal())
-            Console.WriteLine($"Synthesis duration = {sw.ElapsedMilliseconds}");
+        int[] result = FullSynthesis(sampleArray, _sample.Width, _sample.Height, _parameters);
+        _elapsedTime = sw.ElapsedMilliseconds;
+        if (Program.Log.Normal())
+            Console.WriteLine($"Synthesis duration = {_elapsedTime}");
 
         var outputBitmap = Utils.ARGBArrayToBitmap(result, _parameters.OutputWidth, _parameters.OutputHeight);
         outputBitmap.Save(_parameters.OutputFilename);
-    } 
+    }
 
-    static int[] FullSynthesis(int[] sample, int SW, int SH, int N, int OW, int OH, double t)
+    public string GetCSVRecord()
     {
-        int[] result = new int[OW * OH];
-        int?[] origins = new int?[OW * OH];
-        Random random = new Random();
+        // sample1 sample_size output output_image_size duration seed neighborhood temperature
+        return $"{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{_parameters.Seed};{_parameters.Neighborhood};not_used";
+    }
+
+    static int[] FullSynthesis(int[] sample, int sampleWidth, int sampleHeight, Parameters p)
+    {
+        int[] result = new int[p.OutputWidth * p.OutputHeight];
+        int?[] origins = new int?[p.OutputWidth * p.OutputHeight];
+
+        var seed = p.Seed == -1 ? DateTime.Now.Millisecond : p.Seed;
+
+        Random random = new Random(seed);
 
 
         if (Program.Log.Normal())
@@ -92,12 +99,13 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         }
 
         // Make starting noise
-        for (int y = 0; y < OH; y++)
-            for (int x = 0; x < OW; x++) if (y + N >= OH)
-            {
-                result[x + y * OW] = sample[random.Next(SW * SH)];
-                origins[x + y * OW] = -1;
-            }
+        for (int y = 0; y < p.OutputHeight; y++)
+            for (int x = 0; x < p.OutputWidth; x++) 
+                if (y + p.Neighborhood >= p.OutputHeight)
+                {
+                    result[x + y * p.OutputWidth] = sample[random.Next(sampleWidth * sampleHeight)];
+                    origins[x + y * p.OutputWidth] = -1;
+                }
 
         for (int i = 0; i < result.Length; i++)
         {
@@ -107,9 +115,9 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
             double max = -1E+4;
             int argmax = -1;
 
-            for (int j = 0; j < SW * SH; j++)
+            for (int j = 0; j < sampleWidth * sampleHeight; j++)
             {
-                double s = Similarity(j, sample, SW, SH, i, result, OW, OH, N, origins);
+                double s = Similarity(j, sample, sampleWidth, sampleHeight, i, result, p.OutputWidth, p.OutputHeight, p.Neighborhood, origins);
                 if (s > max)
                 {
                     max = s;
@@ -141,15 +149,10 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
                 if (origins == null || origins[sy2 * w2 + sx2] != null)
                 {
-
                     Color C1 = Color.FromArgb(c1), C2 = Color.FromArgb(c2);
                     sum -= ((C1.R - C2.R) * (C1.R - C2.R) + (C1.G - C2.G) * (C1.G - C2.G) + (C1.B - C2.B) * (C1.B - C2.B)) / 65536.0;
-
                 }
             }
-
         return sum;
     }
-
-
 }
