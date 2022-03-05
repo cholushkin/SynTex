@@ -3,9 +3,9 @@
 |FNS|<img src="Samples/skulls.png">|25x25|<img src="ExperimentsFNSOutput/skulls1.png">||||||
 |FNS|<img src="Samples/skulls.png">|25x25|<img src="ExperimentsFNSOutput/skulls2.png">||||||
 |FNS|<img src="Samples/skulls.png">|25x25|<img src="ExperimentsFNSOutput/skulls3.png">||||||
-|FNS|<img src="Samples/wall.png">|32x32|<img src="Output/wall1.png">||||||
-|FNS|<img src="Samples/wall.png">|32x32|<img src="Output/wall2.png">||||||
-|FNS|<img src="Samples/wall.png">|32x32|<img src="Output/wall3.png">||||||
+|FNS|<img src="Samples/wall.png">|32x32|<img src="ExperimentsFNSOutput/wall1.png">||||||
+|FNS|<img src="Samples/wall.png">|32x32|<img src="ExperimentsFNSOutput/wall2.png">||||||
+|FNS|<img src="Samples/wall.png">|32x32|<img src="ExperimentsFNSOutput/wall3.png">||||||
 |FNS|<img src="Samples/square_spiral.png">|64x32|<img src="ExperimentsFNSOutput/square_spiral1.png">||||||
 |FNS|<img src="Samples/square_spiral.png">|64x32|<img src="ExperimentsFNSOutput/square_spiral2.png">||||||
 |FNS|<img src="Samples/square_spiral.png">|64x32|<img src="ExperimentsFNSOutput/square_spiral3.png">||||||

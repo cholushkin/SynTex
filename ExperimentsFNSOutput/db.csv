@@ -2,9 +2,9 @@ algorithm;sample1;sample_size;output;output_image_size;duration;seed;neighborhoo
 FNS;Samples/skulls.png;25x25;ExperimentsFNSOutput/skulls1.png;64x64;1208;42;1;-
 FNS;Samples/skulls.png;25x25;ExperimentsFNSOutput/skulls2.png;64x64;3116;42;2;-
 FNS;Samples/skulls.png;25x25;ExperimentsFNSOutput/skulls3.png;64x64;5464;42;3;-
-FNS;Samples/wall.png;32x32;Output/wall1.png;128x128;7010;42;1;-
-FNS;Samples/wall.png;32x32;Output/wall2.png;128x128;17794;42;2;-
-FNS;Samples/wall.png;32x32;Output/wall3.png;128x128;33994;42;3;-
+FNS;Samples/wall.png;32x32;ExperimentsFNSOutput/wall1.png;128x128;7010;42;1;-
+FNS;Samples/wall.png;32x32;ExperimentsFNSOutput/wall2.png;128x128;17794;42;2;-
+FNS;Samples/wall.png;32x32;ExperimentsFNSOutput/wall3.png;128x128;33994;42;3;-
 FNS;Samples/square_spiral.png;64x32;ExperimentsFNSOutput/square_spiral1.png;128x128;13665;42;1;-
 FNS;Samples/square_spiral.png;64x32;ExperimentsFNSOutput/square_spiral2.png;128x128;36287;42;2;-
 FNS;Samples/square_spiral.png;64x32;ExperimentsFNSOutput/square_spiral3.png;128x128;69791;42;3;-
