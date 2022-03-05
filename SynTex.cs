@@ -66,7 +66,7 @@ static class Program
             using (StreamWriter sw = File.AppendText(dbFilename))
             {
                 if(isNewFile)
-                    sw.WriteLine("algorithm;sample1;sample_size;output;output_image_size;duration;seed;neighborhood;algorithm_unique_parameters");
+                    sw.WriteLine("algorithm;sample1;sample_size;output;output_image_size;duration;seed;algorithm_parameters");
                 sw.WriteLine(csvRow);
             }
         }

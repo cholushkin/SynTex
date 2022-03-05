@@ -17,6 +17,7 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
     private Parameters _parameters;
     private Bitmap _sample;
     private long _elapsedTime;
+    private int _seed;
 
     public void ParseCommandLine(string[] commandLineStrings)
     {
@@ -46,7 +47,7 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
     public void PrintHelp()
     {
-        Console.WriteLine("FNS SampleFileName OutputFileName Neighborhood OutputWidth OutputHeight Temperature Seed");
+        Console.WriteLine("FNS SampleFileName OutputFileName Neighborhood OutputWidth OutputHeight Seed");
         Console.WriteLine("  FNS - short name of algorithm to use");
         Console.WriteLine("  SampleFileName - sample file name including extension to use");
         Console.WriteLine("  OutputFileName - output file name including extension");
@@ -78,18 +79,19 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
     public string GetCSVRecord()
     {
-        // algorithm sample1 sample_size output output_image_size duration seed neighborhood algorithm_unique_parameters 
-        return $"{GetAlgorithmShortName()};{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{_parameters.Seed};{_parameters.Neighborhood};-";
+        // algorithm sample1 sample_size output output_image_size duration seed algorithm_parameters 
+        var seed = _parameters.Seed == -1 ? $"-1({_seed})" : _seed.ToString();
+        return $"{GetAlgorithmShortName()};{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{seed};neighborhood={_parameters.Neighborhood}";
     }
 
-    static int[] FullSynthesis(int[] sample, int sampleWidth, int sampleHeight, Parameters p)
+    int[] FullSynthesis(int[] sample, int sampleWidth, int sampleHeight, Parameters p)
     {
         int[] result = new int[p.OutputWidth * p.OutputHeight];
         int?[] origins = new int?[p.OutputWidth * p.OutputHeight];
 
-        var seed = p.Seed == -1 ? DateTime.Now.Millisecond : p.Seed;
+        _seed = p.Seed == -1 ? DateTime.Now.Millisecond : p.Seed;
 
-        Random random = new Random(seed);
+        Random random = new Random(_seed);
 
 
         if (Program.Log.Normal())
