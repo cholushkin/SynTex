@@ -78,8 +78,8 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
     public string GetCSVRecord()
     {
-        // sample1 sample_size output output_image_size duration seed neighborhood temperature
-        return $"{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{_parameters.Seed};{_parameters.Neighborhood};not_used";
+        // algorithm sample1 sample_size output output_image_size duration seed neighborhood algorithm_unique_parameters 
+        return $"{GetAlgorithmShortName()};{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{_parameters.Seed};{_parameters.Neighborhood};-";
     }
 
     static int[] FullSynthesis(int[] sample, int sampleWidth, int sampleHeight, Parameters p)

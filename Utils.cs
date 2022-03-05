@@ -1,3 +1,5 @@
+using System;
+using System.Diagnostics;
 using System.Drawing;
 
 public static class Utils
@@ -12,9 +14,13 @@ public static class Utils
 
     public static Bitmap ARGBArrayToBitmap(int[] argb, int width, int height)
     {
+        Debug.Assert(argb.Length == width*height);
         Bitmap output = new Bitmap(width, height);
         for (int i = 0; i < width * height; ++i)
-            output.SetPixel(i % width, i / height, Color.FromArgb(argb[i]));
+        {
+            output.SetPixel(i % width, i / width, Color.FromArgb(argb[i]));
+        }
+
         return output;
     }
 }

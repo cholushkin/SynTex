@@ -2,8 +2,9 @@
 Forked from https://github.com/mxgmn/TextureSynthesis
 Project created for Microsoft Visual Studio Community 2019 and tested on Windows platform.
 The purpose of this project is to create convenient sandbox for different texture synthesis algorithms. 
-Using SynTex you can create spreadsheets like this:
+Using SynTex you can create spreadsheets like these:
 
+[ExperimentsFNS][ExperimentsFNS]
 ...
 
 ## Usage

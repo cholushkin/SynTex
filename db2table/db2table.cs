@@ -1,14 +1,44 @@
+using System.IO;
+using System.Reflection;
+
 static class Program
 {
+    static string[] Modes = { "MD", "GS" };
     static void Main(string[] args)
     {
-        var dbCSVFile = args[0];
-        var mdFile = args[1];
+        string exeDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        Directory.SetCurrentDirectory(exeDir);
 
+        var convertionMode = args[0];
+        var dbCSVFile = args[1];
+        var outputFile = args[2];
 
-        //| sample1 | sample_size | output | output_image_size | duration | seed | neighborhood | temperature |
-        //|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-        //|||||||||
+        if (convertionMode != Modes[0])
+            return;
 
+        string[] lines = File.ReadAllLines(dbCSVFile);
+
+        using (StreamWriter output = new StreamWriter(outputFile))
+        {
+            for (int i = 0; i < lines.Length; ++i)
+            {
+                if (i == 0)
+                {
+                    var headers = lines[0].Split(';');
+                    //| algorithm | sample1 | sample_size | output | output_image_size | duration | seed | neighborhood | algorithm_unique_parameters |
+                    output.WriteLine($"| {headers[0]} | {headers[1]} | {headers[2]} | {headers[3]} | {headers[4]} | {headers[5]} | {headers[6]} | {headers[7]} | {headers[8]} |");
+                    output.WriteLine("|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|");
+                    continue;
+                }
+
+                var values = lines[i].Split(';');
+                var alg = values[0];
+                var sample1 = $"<img src=\"{values[1]}\">";
+                var sampleSize = values[2];
+                var outputTexture = $"<img src=\"{values[3]}\">";
+
+                output.WriteLine($"|{alg}|{sample1}|{sampleSize}|{outputTexture}||||||");
+            }
+        }
     }
 }

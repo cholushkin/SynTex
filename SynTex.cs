@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 static class Program
 {
@@ -59,13 +60,13 @@ static class Program
             return "v.0.1";
         }
 
-        public void AppendToCSV(string csvRow)
+        public void AppendToCSV(string dbFilename, string csvRow)
         {
-            var isNewFile = !File.Exists(@"db.csv");
-            using (StreamWriter sw = File.AppendText(@"db.csv"))
+            var isNewFile = !File.Exists(dbFilename);
+            using (StreamWriter sw = File.AppendText(dbFilename))
             {
                 if(isNewFile)
-                    sw.WriteLine("sample1;sample_size;output;output_image_size;duration;seed;neighborhood;temperature");
+                    sw.WriteLine("algorithm;sample1;sample_size;output;output_image_size;duration;seed;neighborhood;algorithm_unique_parameters");
                 sw.WriteLine(csvRow);
             }
         }
@@ -76,6 +77,9 @@ static class Program
     {
         try
         {
+            string exeDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            Directory.SetCurrentDirectory(exeDir);
+
             var synTex = new SynTex();
             Console.WriteLine($"SynTex {synTex.GetVersionString()}");
             
@@ -96,12 +100,13 @@ static class Program
                 Console.WriteLine($"Registered algorithms ({synTex.GetRegisteredAlgorithms().Count}):");
                 foreach (var alg in synTex.GetRegisteredAlgorithms().Values)
                     Console.WriteLine($"  * {alg.GetAlgorithmName()} ({alg.GetAlgorithmShortName()})");
-            }    
+            }
 
-            var synAlg = synTex.GetAlgorithm(args[1]);
-            synAlg.ParseCommandLine(args.Skip(1).ToArray());
+            var db = args[1];
+            var synAlg = synTex.GetAlgorithm(args[2]);
+            synAlg.ParseCommandLine(args.Skip(2).ToArray());
             synAlg.Synthesize();
-            synTex.AppendToCSV(synAlg.GetCSVRecord());
+            synTex.AppendToCSV(db, synAlg.GetCSVRecord());
         }
         catch (Exception e)
         {
@@ -125,8 +130,9 @@ static class Program
 
     static void PrintHelp(SynTex synTex)
     {
-        Console.WriteLine("syntex.exe log_level algorithm algorithm_parameters");
+        Console.WriteLine("syntex.exe log_level db algorithm algorithm_parameters");
         Console.WriteLine("  log_level - log printing level (disabled, important, normal, verbose)");
+        Console.WriteLine("  db - CSV (comma separated values) database file name and path to output to");
         Console.WriteLine("  algorithm - short name of the algorithm");
         Console.WriteLine("  algorithm_parameters - parameters set for a specific algorithm");
         Console.WriteLine(" ");
