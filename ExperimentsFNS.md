@@ -33,3 +33,12 @@
 |FNS|<img src="Samples/solid_ball.png">|13x13|<img src="ExperimentsFNSOutput/solid_ball1.png">|128x128|7864|-1(274)|neighborhood=3|
 |FNS|<img src="Samples/solid_ball.png">|13x13|<img src="ExperimentsFNSOutput/solid_ball2.png">|128x128|11970|-1(250)|neighborhood=4|
 |FNS|<img src="Samples/solid_ball.png">|13x13|<img src="ExperimentsFNSOutput/solid_ball3.png">|128x128|16805|-1(316)|neighborhood=5|
+|FNS|<img src="Samples/city.png">|32x32|<img src="ExperimentsFNSOutput/city1.png">|128x32|11547|4242|neighborhood=3|
+|FNS|<img src="Samples/city.png">|32x32|<img src="ExperimentsFNSOutput/city2.png">|128x32|38798|4242|neighborhood=4|
+|FNS|<img src="Samples/city.png">|32x32|<img src="ExperimentsFNSOutput/city3.png">|128x32|65782|4242|neighborhood=5|
+|FNS|<img src="Samples/city2.png">|32x32|<img src="ExperimentsFNSOutput/cityb1.png">|128x32|24579|4242|neighborhood=3|
+|FNS|<img src="Samples/city2.png">|32x32|<img src="ExperimentsFNSOutput/cityb2.png">|128x32|42163|4242|neighborhood=4|
+|FNS|<img src="Samples/city2.png">|32x32|<img src="ExperimentsFNSOutput/cityb3.png">|128x32|63515|4242|neighborhood=5|
+|FNS|<img src="Samples/city3.png">|32x32|<img src="ExperimentsFNSOutput/cityc1.png">|128x32|20773|4242|neighborhood=3|
+|FNS|<img src="Samples/city3.png">|32x32|<img src="ExperimentsFNSOutput/cityc2.png">|128x32|42096|4242|neighborhood=4|
+|FNS|<img src="Samples/city3.png">|32x32|<img src="ExperimentsFNSOutput/cityc3.png">|128x32|55370|4242|neighborhood=5|
