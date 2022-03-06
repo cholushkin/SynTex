@@ -26,3 +26,9 @@ FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph3.png;128x64;15881;-1(59
 FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph4.png;128x64;25722;-1(564);neighborhood=4
 FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph5.png;128x64;37690;-1(399);neighborhood=5
 FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph6.png;128x64;52188;-1(184);neighborhood=6
+FNS;Samples/ball.png;13x13;ExperimentsFNSOutput/ball1.png;128x128;8056;-1(586);neighborhood=3
+FNS;Samples/ball.png;13x13;ExperimentsFNSOutput/ball2.png;128x128;12759;-1(736);neighborhood=4
+FNS;Samples/ball.png;13x13;ExperimentsFNSOutput/ball3.png;128x128;15559;-1(606);neighborhood=5
+FNS;Samples/solid_ball.png;13x13;ExperimentsFNSOutput/solid_ball1.png;128x128;7864;-1(274);neighborhood=3
+FNS;Samples/solid_ball.png;13x13;ExperimentsFNSOutput/solid_ball2.png;128x128;11970;-1(250);neighborhood=4
+FNS;Samples/solid_ball.png;13x13;ExperimentsFNSOutput/solid_ball3.png;128x128;16805;-1(316);neighborhood=5

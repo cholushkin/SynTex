@@ -27,3 +27,9 @@
 |FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph4.png">|128x64|25722|-1(564)|neighborhood=4|
 |FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph5.png">|128x64|37690|-1(399)|neighborhood=5|
 |FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph6.png">|128x64|52188|-1(184)|neighborhood=6|
+|FNS|<img src="Samples/ball.png">|13x13|<img src="ExperimentsFNSOutput/ball1.png">|128x128|8056|-1(586)|neighborhood=3|
+|FNS|<img src="Samples/ball.png">|13x13|<img src="ExperimentsFNSOutput/ball2.png">|128x128|12759|-1(736)|neighborhood=4|
+|FNS|<img src="Samples/ball.png">|13x13|<img src="ExperimentsFNSOutput/ball3.png">|128x128|15559|-1(606)|neighborhood=5|
+|FNS|<img src="Samples/solid_ball.png">|13x13|<img src="ExperimentsFNSOutput/solid_ball1.png">|128x128|7864|-1(274)|neighborhood=3|
+|FNS|<img src="Samples/solid_ball.png">|13x13|<img src="ExperimentsFNSOutput/solid_ball2.png">|128x128|11970|-1(250)|neighborhood=4|
+|FNS|<img src="Samples/solid_ball.png">|13x13|<img src="ExperimentsFNSOutput/solid_ball3.png">|128x128|16805|-1(316)|neighborhood=5|
