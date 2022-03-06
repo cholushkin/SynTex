@@ -57,7 +57,7 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         Console.WriteLine("  Seed - random number generator seed. If seed == -1 then seed will be randomized");
         Console.WriteLine("");
         Console.WriteLine("Example:");
-        Console.WriteLine("  syntex.exe verbose FNS Samples/water.png Output/watergen.png 3 48 48 1.0 42");
+        Console.WriteLine("  syntex.exe verbose FNS Samples/water.png Output/watergen.png 3 48 48 42");
     }
 
     public void Synthesize()
@@ -87,8 +87,6 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
     int[] FullSynthesis(int[] sample, int sampleWidth, int sampleHeight, Parameters p)
     {
         int[] result = new int[p.OutputWidth * p.OutputHeight];
-        int?[] origins = new int?[p.OutputWidth * p.OutputHeight];
-
         _seed = p.Seed == -1 ? DateTime.Now.Millisecond : p.Seed;
 
         Random random = new Random(_seed);
@@ -104,11 +102,9 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         for (int y = 0; y < p.OutputHeight; y++)
             for (int x = 0; x < p.OutputWidth; x++)
                 if (y + p.Neighborhood >= p.OutputHeight)
-                {
                     result[x + y * p.OutputWidth] = sample[random.Next(sampleWidth * sampleHeight)];
-                    origins[x + y * p.OutputWidth] = -1;
-                }
 
+        // For each output pixel
         for (int i = 0; i < result.Length; i++)
         {
             if (Program.Log.Normal())
@@ -117,9 +113,10 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
             double max = -1E+4;
             int argmax = -1;
 
+            // Find max similarity to current pixel in each pixel of the sample
             for (int j = 0; j < sampleWidth * sampleHeight; j++)
             {
-                double s = Similarity(j, sample, sampleWidth, sampleHeight, i, result, p.OutputWidth, p.OutputHeight, p.Neighborhood, origins);
+                double s = Similarity(j, sample, sampleWidth, sampleHeight, i, result, p.OutputWidth, p.OutputHeight, p.Neighborhood);
                 if (s > max)
                 {
                     max = s;
@@ -128,7 +125,6 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
             }
 
             result[i] = sample[argmax];
-            origins[i] = -1;
         }
 
         if (Program.Log.Normal())
@@ -140,25 +136,36 @@ public class FullNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgorithm
         return result;
     }
 
-    static double Similarity(int i1, int[] b1, int w1, int h1, int i2, int[] b2, int w2, int h2, int N, int?[] origins)
+    // spi - sample pixel index
+    // sample - sample to search similarity
+    // sampleWidth, sampleHeight - size of the sample in pixels
+    // opi - output pixel index
+    // result - resulting texture
+    // resultWidth, resultHeight - result texture size in pixels
+    // neighborhood - searching neighborhood
+    static double Similarity(
+        int spi, int[] sample, int sampleWidth, int sampleHeight,
+        int opi, int[] result, int resultWidth, int resultHeight,
+        int neighborhood)
     {
         double sum = 0;
-        int x1 = i1 % w1, y1 = i1 / w1, x2 = i2 % w2, y2 = i2 / w2;
+        int x1 = spi % sampleWidth, y1 = spi / sampleWidth; // point1 - current sample point
+        int x2 = opi % resultWidth, y2 = opi / resultWidth; // point2 - result point
 
-        for (int dy = -N; dy <= 0; dy++)
-            for (int dx = -N; (dy < 0 && dx <= N) || (dy == 0 && dx < 0); dx++)
+        // check L-shaped neighborhood
+        for (int dy = -neighborhood; dy <= 0; dy++)
+            for (int dx = -neighborhood; (dy < 0 && dx <= neighborhood) || (dy == 0 && dx < 0); dx++)
             {
-                int sx1 = (x1 + dx + w1) % w1, sy1 = (y1 + dy + h1) % h1;
-                int sx2 = (x2 + dx + w2) % w2, sy2 = (y2 + dy + h2) % h2;
+                int sx1 = (x1 + dx + sampleWidth) % sampleWidth, sy1 = (y1 + dy + sampleHeight) % sampleHeight;
+                int sx2 = (x2 + dx + resultWidth) % resultWidth, sy2 = (y2 + dy + resultHeight) % resultHeight;
 
-                int c1 = b1[sx1 + sy1 * w1];
-                int c2 = b2[sx2 + sy2 * w2];
+                int c1 = sample[sx1 + sy1 * sampleWidth];
+                int c2 = result[sx2 + sy2 * resultWidth];
 
-                if (origins == null || origins[sy2 * w2 + sx2] != null)
-                {
-                    Color C1 = Color.FromArgb(c1), C2 = Color.FromArgb(c2);
-                    sum -= ((C1.R - C2.R) * (C1.R - C2.R) + (C1.G - C2.G) * (C1.G - C2.G) + (C1.B - C2.B) * (C1.B - C2.B)) / 65536.0;
-                }
+                Color C1 = Color.FromArgb(c1);
+                Color C2 = Color.FromArgb(c2);
+                sum -= ((C1.R - C2.R) * (C1.R - C2.R) + (C1.G - C2.G) * (C1.G - C2.G) + (C1.B - C2.B) * (C1.B - C2.B)) / 65536.0;
+
             }
         return sum;
     }

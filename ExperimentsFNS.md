@@ -21,3 +21,9 @@
 |FNS|<img src="Samples/bluehalls.png">|25x25|<img src="ExperimentsFNSOutput/bluehalls1.png">|128x128|5052|42|neighborhood=1|
 |FNS|<img src="Samples/bluehalls.png">|25x25|<img src="ExperimentsFNSOutput/bluehalls2.png">|128x128|12302|42|neighborhood=2|
 |FNS|<img src="Samples/bluehalls.png">|25x25|<img src="ExperimentsFNSOutput/bluehalls3.png">|128x128|21109|42|neighborhood=3|
+|FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph1.png">|128x64|3385|-1(428)|neighborhood=1|
+|FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph2.png">|128x64|8622|-1(893)|neighborhood=2|
+|FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph3.png">|128x64|15881|-1(595)|neighborhood=3|
+|FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph4.png">|128x64|25722|-1(564)|neighborhood=4|
+|FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph5.png">|128x64|37690|-1(399)|neighborhood=5|
+|FNS|<img src="Samples/sgraph.png">|32x32|<img src="ExperimentsFNSOutput/sgraph6.png">|128x64|52188|-1(184)|neighborhood=6|

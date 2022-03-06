@@ -20,3 +20,9 @@ FNS;Samples/redfoam.png;32x32;ExperimentsFNSOutput/redfoam3.png;128x128;35113;42
 FNS;Samples/bluehalls.png;25x25;ExperimentsFNSOutput/bluehalls1.png;128x128;5052;42;neighborhood=1
 FNS;Samples/bluehalls.png;25x25;ExperimentsFNSOutput/bluehalls2.png;128x128;12302;42;neighborhood=2
 FNS;Samples/bluehalls.png;25x25;ExperimentsFNSOutput/bluehalls3.png;128x128;21109;42;neighborhood=3
+FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph1.png;128x64;3385;-1(428);neighborhood=1
+FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph2.png;128x64;8622;-1(893);neighborhood=2
+FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph3.png;128x64;15881;-1(595);neighborhood=3
+FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph4.png;128x64;25722;-1(564);neighborhood=4
+FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph5.png;128x64;37690;-1(399);neighborhood=5
+FNS;Samples/sgraph.png;32x32;ExperimentsFNSOutput/sgraph6.png;128x64;52188;-1(184);neighborhood=6
