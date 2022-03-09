@@ -37,6 +37,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoherentNeighborhoodSearch.cs" />
     <Compile Include="CSVWriter.cs" />
     <Compile Include="FullNeighbourhoodSearch.cs" />
     <Compile Include="LogChecker.cs" />
