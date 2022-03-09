@@ -1,43 +1,43 @@
 algorithm;sample1;sample_size;output;output_image_size;duration;seed;algorithm_parameters
-COH;Samples/skulls.png;25x25;ExperimentsCOH3Output/skulls1.png;64x64;171;42;neighborhood=1|K=3
-COH;Samples/skulls.png;25x25;ExperimentsCOH3Output/skulls2.png;64x64;165;42;neighborhood=2|K=3
-COH;Samples/skulls.png;25x25;ExperimentsCOH3Output/skulls3.png;64x64;168;42;neighborhood=3|K=3
-COH;Samples/wall.png;32x32;ExperimentsCOH3Output/wall1.png;128x128;618;42;neighborhood=1|K=3
-COH;Samples/wall.png;32x32;ExperimentsCOH3Output/wall2.png;128x128;570;42;neighborhood=2|K=3
-COH;Samples/wall.png;32x32;ExperimentsCOH3Output/wall3.png;128x128;617;42;neighborhood=3|K=3
-COH;Samples/square_spiral.png;64x32;ExperimentsCOH3Output/square_spiral1.png;128x128;552;42;neighborhood=1|K=3
-COH;Samples/square_spiral.png;64x32;ExperimentsCOH3Output/square_spiral2.png;128x128;592;42;neighborhood=2|K=3
-COH;Samples/square_spiral.png;64x32;ExperimentsCOH3Output/square_spiral3.png;128x128;632;42;neighborhood=3|K=3
-COH;Samples/halls_and_foam.png;50x25;ExperimentsCOH3Output/halls_and_foam1.png;128x128;622;33;neighborhood=1|K=3
-COH;Samples/halls_and_foam.png;50x25;ExperimentsCOH3Output/halls_and_foam2.png;128x128;579;33;neighborhood=2|K=3
-COH;Samples/halls_and_foam.png;50x25;ExperimentsCOH3Output/halls_and_foam3.png;128x128;601;33;neighborhood=3|K=3
-COH;Samples/halls_and_foam_v.png;25x50;ExperimentsCOH3Output/halls_and_foam_v1.png;128x128;612;33;neighborhood=1|K=3
-COH;Samples/halls_and_foam_v.png;25x50;ExperimentsCOH3Output/halls_and_foam_v2.png;128x128;642;33;neighborhood=2|K=3
-COH;Samples/halls_and_foam_v.png;25x50;ExperimentsCOH3Output/halls_and_foam_v3.png;128x128;653;33;neighborhood=3|K=3
-COH;Samples/redfoam.png;32x32;ExperimentsCOH3Output/redfoam1.png;128x128;618;42;neighborhood=1|K=3
-COH;Samples/redfoam.png;32x32;ExperimentsCOH3Output/redfoam2.png;128x128;574;42;neighborhood=2|K=3
-COH;Samples/redfoam.png;32x32;ExperimentsCOH3Output/redfoam3.png;128x128;622;42;neighborhood=3|K=3
-COH;Samples/bluehalls.png;25x25;ExperimentsCOH3Output/bluehalls1.png;128x128;627;42;neighborhood=1|K=3
-COH;Samples/bluehalls.png;25x25;ExperimentsCOH3Output/bluehalls2.png;128x128;576;42;neighborhood=2|K=3
-COH;Samples/bluehalls.png;25x25;ExperimentsCOH3Output/bluehalls3.png;128x128;662;42;neighborhood=3|K=3
-COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph1.png;128x64;310;-1(165);neighborhood=1|K=3
-COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph2.png;128x64;291;-1(705);neighborhood=2|K=3
-COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph3.png;128x64;347;-1(324);neighborhood=3|K=3
-COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph4.png;128x64;322;-1(125);neighborhood=4|K=3
-COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph5.png;128x64;354;-1(95);neighborhood=5|K=3
-COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph6.png;128x64;380;-1(265);neighborhood=6|K=3
-COH;Samples/ball.png;13x13;ExperimentsCOH3Output/ball1.png;128x128;692;-1(705);neighborhood=3|K=3
-COH;Samples/ball.png;13x13;ExperimentsCOH3Output/ball2.png;128x128;639;-1(494);neighborhood=4|K=3
-COH;Samples/ball.png;13x13;ExperimentsCOH3Output/ball3.png;128x128;741;-1(245);neighborhood=5|K=3
-COH;Samples/solid_ball.png;13x13;ExperimentsCOH3Output/solid_ball1.png;128x128;717;-1(165);neighborhood=3|K=3
-COH;Samples/solid_ball.png;13x13;ExperimentsCOH3Output/solid_ball2.png;128x128;719;-1(989);neighborhood=4|K=3
-COH;Samples/solid_ball.png;13x13;ExperimentsCOH3Output/solid_ball3.png;128x128;776;-1(799);neighborhood=5|K=3
-COH;Samples/city.png;32x32;ExperimentsCOH3Output/city1.png;128x32;171;4242;neighborhood=3|K=3
-COH;Samples/city.png;32x32;ExperimentsCOH3Output/city2.png;128x32;166;4242;neighborhood=4|K=3
-COH;Samples/city.png;32x32;ExperimentsCOH3Output/city3.png;128x32;179;4242;neighborhood=5|K=3
-COH;Samples/city2.png;32x32;ExperimentsCOH3Output/cityb1.png;128x32;150;4242;neighborhood=3|K=3
-COH;Samples/city2.png;32x32;ExperimentsCOH3Output/cityb2.png;128x32;165;4242;neighborhood=4|K=3
-COH;Samples/city2.png;32x32;ExperimentsCOH3Output/cityb3.png;128x32;212;4242;neighborhood=5|K=3
-COH;Samples/city3.png;32x32;ExperimentsCOH3Output/cityc1.png;128x32;158;4242;neighborhood=3|K=3
-COH;Samples/city3.png;32x32;ExperimentsCOH3Output/cityc2.png;128x32;189;4242;neighborhood=4|K=3
-COH;Samples/city3.png;32x32;ExperimentsCOH3Output/cityc3.png;128x32;174;4242;neighborhood=5|K=3
+COH;Samples/skulls.png;25x25;ExperimentsCOH3Output/skulls1.png;64x64;171;42;neighborhood=1, K=3
+COH;Samples/skulls.png;25x25;ExperimentsCOH3Output/skulls2.png;64x64;165;42;neighborhood=2, K=3
+COH;Samples/skulls.png;25x25;ExperimentsCOH3Output/skulls3.png;64x64;168;42;neighborhood=3, K=3
+COH;Samples/wall.png;32x32;ExperimentsCOH3Output/wall1.png;128x128;618;42;neighborhood=1, K=3
+COH;Samples/wall.png;32x32;ExperimentsCOH3Output/wall2.png;128x128;570;42;neighborhood=2, K=3
+COH;Samples/wall.png;32x32;ExperimentsCOH3Output/wall3.png;128x128;617;42;neighborhood=3, K=3
+COH;Samples/square_spiral.png;64x32;ExperimentsCOH3Output/square_spiral1.png;128x128;552;42;neighborhood=1, K=3
+COH;Samples/square_spiral.png;64x32;ExperimentsCOH3Output/square_spiral2.png;128x128;592;42;neighborhood=2, K=3
+COH;Samples/square_spiral.png;64x32;ExperimentsCOH3Output/square_spiral3.png;128x128;632;42;neighborhood=3, K=3
+COH;Samples/halls_and_foam.png;50x25;ExperimentsCOH3Output/halls_and_foam1.png;128x128;622;33;neighborhood=1, K=3
+COH;Samples/halls_and_foam.png;50x25;ExperimentsCOH3Output/halls_and_foam2.png;128x128;579;33;neighborhood=2, K=3
+COH;Samples/halls_and_foam.png;50x25;ExperimentsCOH3Output/halls_and_foam3.png;128x128;601;33;neighborhood=3, K=3
+COH;Samples/halls_and_foam_v.png;25x50;ExperimentsCOH3Output/halls_and_foam_v1.png;128x128;612;33;neighborhood=1, K=3
+COH;Samples/halls_and_foam_v.png;25x50;ExperimentsCOH3Output/halls_and_foam_v2.png;128x128;642;33;neighborhood=2, K=3
+COH;Samples/halls_and_foam_v.png;25x50;ExperimentsCOH3Output/halls_and_foam_v3.png;128x128;653;33;neighborhood=3, K=3
+COH;Samples/redfoam.png;32x32;ExperimentsCOH3Output/redfoam1.png;128x128;618;42;neighborhood=1, K=3
+COH;Samples/redfoam.png;32x32;ExperimentsCOH3Output/redfoam2.png;128x128;574;42;neighborhood=2, K=3
+COH;Samples/redfoam.png;32x32;ExperimentsCOH3Output/redfoam3.png;128x128;622;42;neighborhood=3, K=3
+COH;Samples/bluehalls.png;25x25;ExperimentsCOH3Output/bluehalls1.png;128x128;627;42;neighborhood=1, K=3
+COH;Samples/bluehalls.png;25x25;ExperimentsCOH3Output/bluehalls2.png;128x128;576;42;neighborhood=2, K=3
+COH;Samples/bluehalls.png;25x25;ExperimentsCOH3Output/bluehalls3.png;128x128;662;42;neighborhood=3, K=3
+COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph1.png;128x64;310;-1(165);neighborhood=1, K=3
+COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph2.png;128x64;291;-1(705);neighborhood=2, K=3
+COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph3.png;128x64;347;-1(324);neighborhood=3, K=3
+COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph4.png;128x64;322;-1(125);neighborhood=4, K=3
+COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph5.png;128x64;354;-1(95);neighborhood=5, K=3
+COH;Samples/sgraph.png;32x32;ExperimentsCOH3Output/sgraph6.png;128x64;380;-1(265);neighborhood=6, K=3
+COH;Samples/ball.png;13x13;ExperimentsCOH3Output/ball1.png;128x128;692;-1(705);neighborhood=3, K=3
+COH;Samples/ball.png;13x13;ExperimentsCOH3Output/ball2.png;128x128;639;-1(494);neighborhood=4, K=3
+COH;Samples/ball.png;13x13;ExperimentsCOH3Output/ball3.png;128x128;741;-1(245);neighborhood=5, K=3
+COH;Samples/solid_ball.png;13x13;ExperimentsCOH3Output/solid_ball1.png;128x128;717;-1(165);neighborhood=3, K=3
+COH;Samples/solid_ball.png;13x13;ExperimentsCOH3Output/solid_ball2.png;128x128;719;-1(989);neighborhood=4, K=3
+COH;Samples/solid_ball.png;13x13;ExperimentsCOH3Output/solid_ball3.png;128x128;776;-1(799);neighborhood=5, K=3
+COH;Samples/city.png;32x32;ExperimentsCOH3Output/city1.png;128x32;171;4242;neighborhood=3, K=3
+COH;Samples/city.png;32x32;ExperimentsCOH3Output/city2.png;128x32;166;4242;neighborhood=4, K=3
+COH;Samples/city.png;32x32;ExperimentsCOH3Output/city3.png;128x32;179;4242;neighborhood=5, K=3
+COH;Samples/city2.png;32x32;ExperimentsCOH3Output/cityb1.png;128x32;150;4242;neighborhood=3, K=3
+COH;Samples/city2.png;32x32;ExperimentsCOH3Output/cityb2.png;128x32;165;4242;neighborhood=4, K=3
+COH;Samples/city2.png;32x32;ExperimentsCOH3Output/cityb3.png;128x32;212;4242;neighborhood=5, K=3
+COH;Samples/city3.png;32x32;ExperimentsCOH3Output/cityc1.png;128x32;158;4242;neighborhood=3, K=3
+COH;Samples/city3.png;32x32;ExperimentsCOH3Output/cityc2.png;128x32;189;4242;neighborhood=4, K=3
+COH;Samples/city3.png;32x32;ExperimentsCOH3Output/cityc3.png;128x32;174;4242;neighborhood=5, K=3

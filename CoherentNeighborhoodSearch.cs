@@ -89,7 +89,7 @@ public class CoherentNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgori
     {
         // algorithm sample1 sample_size output output_image_size duration seed algorithm_parameters 
         var seed = _parameters.Seed == -1 ? $"-1({_seed})" : _seed.ToString();
-        return $"{GetAlgorithmShortName()};{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{seed};neighborhood={_parameters.Neighborhood}|K={_parameters.K}";
+        return $"{GetAlgorithmShortName()};{_parameters.SampleFilename};{_sample.Width}x{_sample.Height};{_parameters.OutputFilename};{_parameters.OutputWidth}x{_parameters.OutputHeight};{_elapsedTime};{seed};neighborhood={_parameters.Neighborhood}, K={_parameters.K}";
     }
 
     int[] CoherentSynthesis(int[] sample, int sampleWidth, int sampleHeight, List<int>[] sets, Parameters p)
