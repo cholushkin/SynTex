@@ -1,0 +1,3 @@
+"../syntex.exe" verbose ExperimentsCOH2Output/db.csv COH Samples/square_spiral.png ExperimentsCOH2Output/square_spiral1.png 1 2 128 128 42
+"../syntex.exe" verbose ExperimentsCOH2Output/db.csv COH Samples/square_spiral.png ExperimentsCOH2Output/square_spiral2.png 2 2 128 128 42
+"../syntex.exe" verbose ExperimentsCOH2Output/db.csv COH Samples/square_spiral.png ExperimentsCOH2Output/square_spiral3.png 3 2 128 128 42

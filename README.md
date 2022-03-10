@@ -5,6 +5,7 @@ Project created for Microsoft Visual Studio 2019 and designed to use on Windows 
 Using SynTex you can create spreadsheets like these:  
 
 Full neigbourhood search basic tests: [ExperimentsFNS.md](ExperimentsFNS.md)  
+Coherent neighborhood search (K=2) basic tests: [ExperimentsCOH2.md](ExperimentsCOH2.md)  
 Coherent neighborhood search (K=3) basic tests: [ExperimentsCOH3.md](ExperimentsCOH3.md)  
 
 ...  

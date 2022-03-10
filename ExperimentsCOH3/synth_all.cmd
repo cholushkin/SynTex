@@ -1,0 +1,10 @@
+synth_skulls.cmd
+synth_wall.cmd
+synth_square_spiral.cmd
+synth_halls_and_foam.cmd
+synth_redfoam.cmd
+synth_bluehalls.cmd
+synth_sgraph.cmd
+synth_ball.cmd
+synth_solid_ball.cmd
+synth_city.cmd
