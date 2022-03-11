@@ -40,11 +40,16 @@
     <Compile Include="CoherentNeighborhoodSearch.cs" />
     <Compile Include="CSVWriter.cs" />
     <Compile Include="FullNeighbourhoodSearch.cs" />
+    <Compile Include="Harrison.cs" />
     <Compile Include="LogChecker.cs" />
     <Compile Include="SynTex.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="BumpKit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bumpkit.1.0.2\lib\BumpKit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.Composition.Registration" />

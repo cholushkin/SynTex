@@ -1,0 +1,9 @@
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city.png  ExperimentsHAR1Output/city1.gif  3 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city.png  ExperimentsHAR1Output/city2.gif  4 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city.png  ExperimentsHAR1Output/city3.gif  5 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city2.png ExperimentsHAR1Output/cityb1.gif 3 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city2.png ExperimentsHAR1Output/cityb2.gif 4 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city2.png ExperimentsHAR1Output/cityb3.gif 5 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city3.png ExperimentsHAR1Output/cityc1.gif 3 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city3.png ExperimentsHAR1Output/cityc2.gif 4 20 8 128 32 4242
+"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/city3.png ExperimentsHAR1Output/cityc3.gif 5 20 8 128 32 4242

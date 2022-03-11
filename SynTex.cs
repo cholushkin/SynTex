@@ -86,6 +86,7 @@ static class Program
             // Register all algorithms
             synTex.RegisterAlgorithm(new FullNeighborhoodSearch());
             synTex.RegisterAlgorithm(new CoherentNeighborhoodSearch());
+            synTex.RegisterAlgorithm(new Harrison());
 
             if (args.Length < 1)
             {
