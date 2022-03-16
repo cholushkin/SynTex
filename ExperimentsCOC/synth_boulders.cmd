@@ -1,0 +1,3 @@
+"../syntex.exe" verbose ExperimentsCOC/Output/db.csv COC SamplesBnW/Boulders.png ExperimentsCOC/Output/Boulders1.png 1.0 2 2 64 64 42
+"../syntex.exe" verbose ExperimentsCOC/Output/db.csv COC SamplesBnW/Boulders.png ExperimentsCOC/Output/Boulders2.png 0.1 2 2 64 64 42
+"../syntex.exe" verbose ExperimentsCOC/Output/db.csv COC SamplesBnW/Boulders.png ExperimentsCOC/Output/Boulders3.png 0.1 2 4 64 64 42

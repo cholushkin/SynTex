@@ -10,6 +10,7 @@ Coherent neighborhood search (K=2) basic tests: [ExperimentsCOH2.md](Experiments
 Coherent neighborhood search (K=3) basic tests: [ExperimentsCOH3.md](ExperimentsCOH3.md)  
 Coherent neighborhood search (K=4) basic tests: [ExperimentsCOH4.md](ExperimentsCOH4.md)  
 Resynthesis Harrison's algorithm basic tests: [ExperimentsHAR1.md](ExperimentsHAR1.md)  
+ConvChain basic tests: [ExperimentsCOC.md](ExperimentsCOC.md)
 
 
 

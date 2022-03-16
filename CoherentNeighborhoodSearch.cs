@@ -209,35 +209,4 @@ public class CoherentNeighborhoodSearch : Program.SynTex.ITextureSynthesisAlgori
     }
 
 }
-
-static class Stuff
-{
-
-
-    public static int Random(this double[] array, double r)
-    {
-        double sum = array.Sum();
-
-        if (sum <= 0)
-        {
-            for (int j = 0; j < array.Length; j++) array[j] = 1;
-            sum = array.Sum();
-        }
-
-        for (int j = 0; j < array.Length; j++) array[j] /= sum;
-
-        int i = 0;
-        double x = 0;
-
-        while (i < array.Length)
-        {
-            x += array[i];
-            if (r <= x) return i;
-            i++;
-        }
-
-        return 0;
-    }
-
-    public static int Random(this Dictionary<int, double> dic, double r) => dic.Keys.ToArray()[dic.Values.ToArray().Random(r)];
-}
+ 

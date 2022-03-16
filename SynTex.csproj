@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>SynTex</RootNamespace>
     <AssemblyName>SynTex</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,7 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoherentNeighborhoodSearch.cs" />
-    <Compile Include="CSVWriter.cs" />
+    <Compile Include="ConvChain.cs" />
     <Compile Include="FullNeighbourhoodSearch.cs" />
     <Compile Include="Harrison.cs" />
     <Compile Include="LogChecker.cs" />

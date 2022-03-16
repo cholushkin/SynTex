@@ -87,6 +87,7 @@ static class Program
             synTex.RegisterAlgorithm(new FullNeighborhoodSearch());
             synTex.RegisterAlgorithm(new CoherentNeighborhoodSearch());
             synTex.RegisterAlgorithm(new Harrison());
+            synTex.RegisterAlgorithm(new ConvChainSearch());
 
             if (args.Length < 1)
             {
