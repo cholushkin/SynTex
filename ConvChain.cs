@@ -214,6 +214,4 @@ public class ConvChainSearch : Program.SynTex.ITextureSynthesisAlgorithm
 
         return field;
     }
-
-    // todo: apply gaussian blur to output for getting smooth transitions 
 }

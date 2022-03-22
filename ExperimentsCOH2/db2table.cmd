@@ -1,1 +1,1 @@
-"../db2table.exe" MD ExperimentsCOH2Output/db.csv ExperimentsCOH2.md
+"../db2table.exe" MD ExperimentsCOH2/Output/db.csv ExperimentsCOH2.md

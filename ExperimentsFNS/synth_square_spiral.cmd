@@ -1,3 +1,3 @@
-"../syntex.exe" verbose ExperimentsFNSOutput/db.csv FNS Samples/square_spiral.png ExperimentsFNSOutput/square_spiral1.png 1 128 128 42
-"../syntex.exe" verbose ExperimentsFNSOutput/db.csv FNS Samples/square_spiral.png ExperimentsFNSOutput/square_spiral2.png 2 128 128 42
-"../syntex.exe" verbose ExperimentsFNSOutput/db.csv FNS Samples/square_spiral.png ExperimentsFNSOutput/square_spiral3.png 3 128 128 42
+"../syntex.exe" verbose ExperimentsFNS/Output/db.csv FNS Samples/square_spiral.png ExperimentsFNS/Output/square_spiral1.png 1 128 128 42
+"../syntex.exe" verbose ExperimentsFNS/Output/db.csv FNS Samples/square_spiral.png ExperimentsFNS/Output/square_spiral2.png 2 128 128 42
+"../syntex.exe" verbose ExperimentsFNS/Output/db.csv FNS Samples/square_spiral.png ExperimentsFNS/Output/square_spiral3.png 3 128 128 42

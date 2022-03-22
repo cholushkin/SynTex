@@ -12,18 +12,19 @@ Coherent neighborhood search (K=4) basic tests: [ExperimentsCOH4.md](Experiments
 Resynthesis Harrison's algorithm basic tests: [ExperimentsHAR1.md](ExperimentsHAR1.md)  
 ConvChain basic tests: [ExperimentsCOC.md](ExperimentsCOC.md)
 
-
+All synthesis made on Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz (8 CPUs), ~4.0GHz machine. Different computer configuration will provide different duration result (but same visual).
+Every table is created by bash scripts located in appropriate directory. To regenerate entire table you have to run all.cmd inside folder.
 
 ## Usage
 If you run the program without any parameters it will print help.
-<p align="center"><img src="Images/RunProgramWithoutParameters.jpg"></p>
+<p align="center"><img src="Images/RunProgramWithoutParameters.png"></p>
 Also you can find examples of using in the Scripts directory.  
 
 Every time you run SynTex.exe with proper parameters it generates texture and writes data related to that texture to db.csv. Later you can use db2table.exe tool to generate table from it. Available option at the moment is MD file only.
 <p align="center"><img src="Images/Pipeline.jpg"></p>
 
 ## Version history
-#### ver 0.1
+#### Version 0.1
 * Refactoring of program structure and code.
 * Console application with command line arguments.
 * Register new algorithms mechanism added.
@@ -32,7 +33,13 @@ Every time you run SynTex.exe with proper parameters it generates texture and wr
 * LogChecker added.
 * db.csv writing added.
 
+### Version 0.2
+* Outputs are moved according their experiment folder.
+* All textures are regenerated on one machine (for comparable duration results)
+
+
 ## If you want to contribute
 There are several directions that are nice to support:
 * Crossplatform project and build support 
 * Generate google spreadsheet as another output from db2table tool
+* Generate gif without compression artifacts

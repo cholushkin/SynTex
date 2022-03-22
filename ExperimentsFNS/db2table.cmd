@@ -1,1 +1,1 @@
-"../db2table.exe" MD ExperimentsFNSOutput/db.csv ExperimentsFNS.md
+"../db2table.exe" MD ExperimentsFNS/Output/db.csv ExperimentsFNS.md

@@ -1,3 +1,3 @@
-"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/square_spiral.png ExperimentsHAR1Output/square_spiral1.gif 1 20 8 128 128 42
-"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/square_spiral.png ExperimentsHAR1Output/square_spiral2.gif 2 20 8 128 128 42
-"../syntex.exe" verbose ExperimentsHAR1Output/db.csv HAR Samples/square_spiral.png ExperimentsHAR1Output/square_spiral3.gif 3 20 8 128 128 42
+"../syntex.exe" verbose ExperimentsHAR1/Output/db.csv HAR Samples/square_spiral.png ExperimentsHAR1/Output/square_spiral1.gif 1 20 8 128 128 42
+"../syntex.exe" verbose ExperimentsHAR1/Output/db.csv HAR Samples/square_spiral.png ExperimentsHAR1/Output/square_spiral2.gif 2 20 8 128 128 42
+"../syntex.exe" verbose ExperimentsHAR1/Output/db.csv HAR Samples/square_spiral.png ExperimentsHAR1/Output/square_spiral3.gif 3 20 8 128 128 42
