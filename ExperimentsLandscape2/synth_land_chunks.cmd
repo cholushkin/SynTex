@@ -1,0 +1,5 @@
+"../syntex.exe" verbose ExperimentsLandscape2/Output/db.csv HAR SamplesLandscapes2/land_chunks.png  ExperimentsLandscape2/Output/land_chunks1.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape2/Output/db.csv HAR SamplesLandscapes2/land_chunks.png  ExperimentsLandscape2/Output/land_chunks2.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape2/Output/db.csv HAR SamplesLandscapes2/land_chunks.png  ExperimentsLandscape2/Output/land_chunks3.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape2/Output/db.csv HAR SamplesLandscapes2/land_chunks.png  ExperimentsLandscape2/Output/land_chunks4.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape2/Output/db.csv HAR SamplesLandscapes2/land_chunks.png  ExperimentsLandscape2/Output/land_chunks5.png  5 20 5 128 128 -1

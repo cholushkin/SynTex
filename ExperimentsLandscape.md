@@ -1,0 +1,33 @@
+| algorithm | sample1 | sample_size | output | output_image_size | duration | seed | algorithm_parameters |
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|HAR|<img src="SamplesLandscapes/land_blured.png">|50x25|<img src="ExperimentsLandscape/Output/landa_blured1.png">|128x128|1461|-1(661)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_blured.png">|50x25|<img src="ExperimentsLandscape/Output/landa_blured2.png">|128x128|1468|-1(186)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_blured.png">|50x25|<img src="ExperimentsLandscape/Output/landa_blured3.png">|128x128|1491|-1(709)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_blured.png">|50x25|<img src="ExperimentsLandscape/Output/landa_blured4.png">|128x128|1455|-1(256)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_blured.png">|50x25|<img src="ExperimentsLandscape/Output/landa_blured5.png">|128x128|1466|-1(775)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_noised.png">|50x25|<img src="ExperimentsLandscape/Output/landa_noised1.png">|128x128|1347|-1(294)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_noised.png">|50x25|<img src="ExperimentsLandscape/Output/landa_noised2.png">|128x128|1348|-1(699)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_noised.png">|50x25|<img src="ExperimentsLandscape/Output/landa_noised3.png">|128x128|1350|-1(105)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_noised.png">|50x25|<img src="ExperimentsLandscape/Output/landa_noised4.png">|128x128|1343|-1(512)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_noised.png">|50x25|<img src="ExperimentsLandscape/Output/landa_noised5.png">|128x128|1343|-1(913)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_sepia.png">|50x25|<img src="ExperimentsLandscape/Output/landa_sepia1.png">|128x128|1349|-1(317)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_sepia.png">|50x25|<img src="ExperimentsLandscape/Output/landa_sepia2.png">|128x128|1340|-1(725)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_sepia.png">|50x25|<img src="ExperimentsLandscape/Output/landa_sepia3.png">|128x128|1343|-1(121)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_sepia.png">|50x25|<img src="ExperimentsLandscape/Output/landa_sepia4.png">|128x128|1343|-1(521)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_sepia.png">|50x25|<img src="ExperimentsLandscape/Output/landa_sepia5.png">|128x128|1346|-1(924)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_simple.png">|50x25|<img src="ExperimentsLandscape/Output/landa_simple1.png">|128x128|1351|-1(332)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_simple.png">|50x25|<img src="ExperimentsLandscape/Output/landa_simple2.png">|128x128|1352|-1(742)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_simple.png">|50x25|<img src="ExperimentsLandscape/Output/landa_simple3.png">|128x128|1354|-1(153)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_simple.png">|50x25|<img src="ExperimentsLandscape/Output/landa_simple4.png">|128x128|1349|-1(565)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land_simple.png">|50x25|<img src="ExperimentsLandscape/Output/landa_simple5.png">|128x128|1353|-1(970)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/land1.png">|128x128|2058|-1(391)|neighborhood=4, M=20, Polish=8|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/land2.png">|128x128|2111|-1(512)|neighborhood=4, M=20, Polish=8|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/land3.png">|128x128|2107|-1(689)|neighborhood=4, M=20, Polish=8|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/land4.png">|128x128|2022|-1(853)|neighborhood=4, M=20, Polish=8|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/land5.png">|128x128|2026|-1(933)|neighborhood=4, M=20, Polish=8|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/land6.png">|128x128|2029|-1(17)|neighborhood=4, M=20, Polish=8|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/landa1.png">|128x128|1354|-1(108)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/landa2.png">|128x128|1408|-1(525)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/landa3.png">|128x128|1495|-1(9)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/landa4.png">|128x128|1440|-1(567)|neighborhood=4, M=20, Polish=5|
+|HAR|<img src="SamplesLandscapes/land.png">|50x25|<img src="ExperimentsLandscape/Output/landa5.png">|128x128|1410|-1(71)|neighborhood=4, M=20, Polish=5|

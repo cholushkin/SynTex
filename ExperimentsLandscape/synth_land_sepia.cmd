@@ -1,0 +1,5 @@
+"../syntex.exe" verbose ExperimentsLandscape/Output/db.csv HAR SamplesLandscapes/land_sepia.png  ExperimentsLandscape/Output/landa_sepia1.png  4 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape/Output/db.csv HAR SamplesLandscapes/land_sepia.png  ExperimentsLandscape/Output/landa_sepia2.png  4 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape/Output/db.csv HAR SamplesLandscapes/land_sepia.png  ExperimentsLandscape/Output/landa_sepia3.png  4 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape/Output/db.csv HAR SamplesLandscapes/land_sepia.png  ExperimentsLandscape/Output/landa_sepia4.png  4 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsLandscape/Output/db.csv HAR SamplesLandscapes/land_sepia.png  ExperimentsLandscape/Output/landa_sepia5.png  4 20 5 128 128 -1

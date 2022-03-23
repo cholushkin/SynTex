@@ -57,7 +57,7 @@ static class Program
 
         public string GetVersionString()
         {
-            return "v.0.1";
+            return "v.0.2";
         }
 
         public void AppendToCSV(string dbFilename, string csvRow)
