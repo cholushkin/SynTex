@@ -4,6 +4,8 @@ Algorithms implementations are based on mxgmn repo https://github.com/mxgmn/Text
 Project created for Microsoft Visual Studio 2019 and designed to use on Windows platform. 
 Using SynTex you can create spreadsheets like these:  
 
+
+Experiments pack A: [ExperimentsPackA.md] (ExperimentsPackA.md)  
 Full neigbourhood search basic tests: [ExperimentsFNS.md](ExperimentsFNS.md)  
 Coherent neighborhood search (K=1) basic tests: [ExperimentsCOH1.md](ExperimentsCOH1.md)  
 Coherent neighborhood search (K=2) basic tests: [ExperimentsCOH2.md](ExperimentsCOH2.md)  

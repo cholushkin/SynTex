@@ -1,0 +1,3 @@
+"../syntex.exe" verbose ExperimentsPackA/Output/db.csv HAR SamplesPackA/decor_d.png  ExperimentsPackA/Output/decor_d1.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsPackA/Output/db.csv HAR SamplesPackA/decor_d.png  ExperimentsPackA/Output/decor_d2.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsPackA/Output/db.csv HAR SamplesPackA/decor_d.png  ExperimentsPackA/Output/decor_d3.png  5 20 5 128 128 -1

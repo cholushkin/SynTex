@@ -1,0 +1,3 @@
+"../syntex.exe" verbose ExperimentsPackA/Output/db.csv HAR SamplesPackA/level_c.png  ExperimentsPackA/Output/level_c1.png  5 20 5 128 128 -1
+"../syntex.exe" verbose ExperimentsPackA/Output/db.csv HAR SamplesPackA/level_c.png  ExperimentsPackA/Output/level_c2.png  5 20 5 128 64 -1
+"../syntex.exe" verbose ExperimentsPackA/Output/db.csv HAR SamplesPackA/level_c.png  ExperimentsPackA/Output/level_c3.png  5 20 5 128 64 -1
